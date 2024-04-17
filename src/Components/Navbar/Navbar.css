@@ -1,49 +1,130 @@
 .nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
   padding: 10px 20px;
-  background-color: #070101;
-  color: white;
-  font-family: sans-serif;
+  font-family: 'Arial', sans-serif;
 }
-.nav img{
-  width: 100px;
-  height: 100px;
+
+.nav h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
-.logo-icon span{
-  color: violet;
+
+.nav span {
+  color: #ff5722;
 }
-.route{
-  margin-right: 40px;
+
+.right-corner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.route a {
-  color: white;
-  text-decoration: none;
+
+.add {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.add span {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.add p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.add:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth button {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
   margin-right: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.auth button:hover {
+  background-color: #ff7043;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.route a:hover {
-  color: #33b4c3;
+.user-details {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
 }
 
-.route a:last-child {
-  margin-right: 0;
+.user-details.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.route a svg {
-  vertical-align: middle;
+.user-details h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
-.route .search{
-  font-size: 18px;
+
+.user-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
 }
-.route a.active {
-  color: #33b4c3; 
-  font-weight: bold; 
+
+.user-details button {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
 }
-@media (max-width:568px){
-    .route{
-      display: none;
-    }
+
+.user-details button:hover {
+  background-color: #ff7043;
+}
+
+@media (max-width: 768px) {
+  .auth button {
+    padding: 5px 5px;
+  }
+
+  .user-details {
+    display: none;
+  }
 }

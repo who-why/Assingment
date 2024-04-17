@@ -1,73 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import './Navbar.css';
-import logo from './logo.png';
-import { FaSearch } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './Navbar.css'
+import { useAuth0 } from '@auth0/auth0-react'
 
-const Navbar = () => {
-  const [activeRoute, setActiveRoute] = useState('Home');
-  const [showMenu, setShowMenu] = useState(false);
+const Navbar = ({isopen,setopen}) => {
+  
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
-
-  useEffect(() => {
-    const storedRoute = localStorage.getItem('activeRoute');
-    if (storedRoute) {
-      setActiveRoute(storedRoute);
+  const handleUserDetailsClick = () => {
+    const userDetails = document.querySelector('.user-details');
+    userDetails.classList.toggle('active');
+  };
+  
+  const handleAddTaskClick = () => {
+    if (!isAuthenticated) {
+      alert('Please login first');
+    } else {
+      setopen(!isopen);
     }
-  }, []);
-
-  const handleRouteClick = (route) => {
-    setActiveRoute(route);
-    localStorage.setItem('activeRoute', route);
   };
-  setTimeout(() => {
-      handleRouteClick();
-  },800);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
 
   return (
     <div className='nav'>
-      <Link to='/'>
-          <img src={logo} alt="logo" />
-      </Link>
-      <div className='route'>
-        <Link to='/'>
-          <a
-            className={activeRoute === 'Home' ? 'active' : ''}
-            onClick={() => handleRouteClick('Home')}
-          >
-            Home
-          </a>
-        </Link>
-        <Link to='/movie'>
-          <a
-            className={activeRoute === 'Movie' ? 'active' : ''}
-            onClick={() => handleRouteClick('Movie')}
-          >
-            Movie
-          </a>
-        </Link>
-        <Link to='/tvshow'>
-          <a
-            className={activeRoute === 'Tv Show' ? 'active' : ''}
-            onClick={() => handleRouteClick('Tv Show')}
-          >
-            Tv Show
-          </a>
-        </Link>
-        <Link to='/search'>
-          <a>
-            <FaSearch />
-          </a>
-        </Link>
-      </div>
-        
-    </div>
-  );
-};
+         <h1><span>N</span>otesApp</h1>
+         
+        <div className="right-corner"> 
+            <div className='add' onClick={handleAddTaskClick}>
+                    <span>+</span>
+                    <p>Add Task</p>
+              </div>
 
-export default Navbar;  
+             {/* login logout & user details*/}
+
+            <div className="auth">
+                 { isAuthenticated ? 
+                        <div className='user'>
+                        <img src={user.picture} alt={user.name} onClick={handleUserDetailsClick} />
+                        <div className='user-details'>
+                              <h2>{user.name}</h2>
+                              <p>{user.email}</p>
+                               <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</button>
+                          </div>
+                     </div>
+                     :
+                    <button onClick={() => loginWithRedirect()}>Log In</button>
+                }
+              </div>
+
+          </div>
+    </div>
+  )
+}
+
+export default Navbar

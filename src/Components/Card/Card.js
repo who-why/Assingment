@@ -1,32 +1,41 @@
-import React from 'react';
-import './Card.css';
-import { FaStar } from 'react-icons/fa';
-import { imagePath } from '../services/api';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
+import './Card.css'
+import { MdDelete } from "react-icons/md";
+import { MyContext } from '../Context/Context';
 
-const Card = ({ item, type }) => {
-  const posterPath = item?.poster_path ? `${imagePath}/${item.poster_path}` : 'https://via.placeholder.com/150';
+
+const Card = ({notes}) => {
+  const { setnote, note} = useContext(MyContext);
+
+  const handleDelete = () => {
+    const updatedNotes = note.filter((n) => n !== notes);
+    setnote(updatedNotes);
+  };
+
+  const renderContent = () => {
+    if (notes.type === 'image') {
+      return <img src={notes.content} alt={notes.title} />;
+    } else if (notes.type === 'video') {
+      return <video controls src={notes.content} />;
+    } else {
+      return <div>{notes.content}</div>;
+    }
+  };
 
   return (
-    <Link to={`/${type}/${item?.id}`}>
-      <div className='card'>
-        <img
-          src={posterPath}
-          alt={item?.title || item?.name}
-        />
-
-        <div className="bottom">
-          <h4>{item?.title || item?.name}</h4>
-          <span>
-            {new Date(
-              item?.release_date || item?.first_air_date
-            ).getFullYear() || "N/A"}
-          </span>
-          <p><span><FaStar /></span> {item?.vote_average?.toFixed(1)}</p>
+    <div className='card' style={{ backgroundColor: notes.bgcolor, color: notes.bgcolor === 'white' || notes.bgcolor === '' ? 'black' : 'white' }}>
+            <h3>{notes.title}</h3>
+            {renderContent()}
+    
+     <div className="below">
+         <p style={{color: notes.bgcolor === 'white' || notes.bgcolor === '' ? 'black' : 'white'}}>{notes.date}</p>
+          <div className="dlt" onClick={handleDelete}>
+              <MdDelete style={{color: notes.bgcolor === 'white' || notes.bgcolor === '' ? 'red' : 'white'}}/>
+           </div>
         </div>
-      </div>
-    </Link>
-  );
-};
+    </div>
 
-export default Card;
+  )
+}
+
+export default Card
