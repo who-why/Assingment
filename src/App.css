@@ -2,3 +2,122 @@
   margin: 0;
   padding: 0;
 }
+.main{
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo{
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: whitesmoke;
+}
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+.todo-items{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.todo-list button{
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-checkbox{
+    width: 6px;
+    height: 4px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.add-todo {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-todo input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-todo button {
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-todo button:hover {
+  background-color: #1dba24;
+}
+.checkbox-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.checkbox-wrapper label input[type="checkbox"]:checked {
+  background-color: green;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: green;
+  color:white;
+  cursor: pointer;
+}
+
+.btn-big {
+  padding: 12px 24px;
+  font-size: 20px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
