@@ -1,37 +1,43 @@
 .home{
-  width: 100%;
   display: flex;
   flex-direction: column;
-}
-.nav {
-  background-color: #2d3748; 
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  
 }
 
-.nav-container {
+.search {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  width: 100%;
+  max-width: 600px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin: 10px;
 }
 
-.nav-logo {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  margin-right: 16px;
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 24px;
 }
 
-.nav-link {
-  color: white;
-  font-size: 1.125rem; 
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #a0aec0; 
+.search .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: #9aa0a6;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .movie{
@@ -42,58 +48,4 @@
   flex-wrap: wrap;
   padding: 3px;
   gap: 10px;
-}
-.movie-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  width: 200px;
-  text-align: center;
-}
-
-.movie-poster {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.movie-item h3 {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-
-.movie-item p {
-  font-size: 1em;
-  margin-bottom: 10px;
-}
-
-.movie-item a {
-  color: #0066cc;
-  text-decoration: none;
-}
-.sortby{
-  padding: 10px;
-  background-color: black;
-}
-.sortby select {
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  color: #333;
-  border: 1px solid blue;
-  outline: none;
-  cursor: pointer;
-  margin-left: 60px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.sortby select:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-.sortby option {
-  padding: 10px;
-  background-color: #fff;
-  color: #333;
 }
