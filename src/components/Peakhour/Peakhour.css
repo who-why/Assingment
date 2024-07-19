@@ -1,0 +1,54 @@
+.peak-hours-container {
+  margin-top: 30px;
+  gap: 20px;
+  text-align: center;
+}
+.peak-hours-container h3{
+  font-size: 18px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.hours-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hour-block {
+  width: 35px;
+  height: 35px;
+  margin: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  font-size: 12px;
+}
+
+.intensity-0 {
+  background-color: #ffffff;
+}
+
+.intensity-1 {
+  background-color: #f0f0ff;
+}
+
+.intensity-2 {
+  background-color: #d0d0ff;
+}
+
+.intensity-3 {
+  background-color: #b0b0ff;
+}
+
+.intensity-4 {
+  background-color: #9090ff;
+}
+
+.intensity-5 {
+  background-color: #7070ff;
+}
+
+.hours-label {
+  margin-top: 20px;
+  font-size: 14px;
+}

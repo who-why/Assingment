@@ -1,0 +1,96 @@
+.revenue {
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.revenue h3 {
+  color: #0d47a1;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.date-picker span {
+  margin: 0 10px;
+  color: #0d47a1;
+  font-weight: bold;
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+}
+
+.react-datepicker__input-container input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #b0bec5;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.react-datepicker__input-container input:focus {
+  border-color: #0d47a1;
+  box-shadow: 0 0 5px rgba(13, 71, 161, 0.5);
+}
+
+@media (max-width: 768px) {
+  .revenue {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .revenue h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .date-picker {
+    flex-direction: column;
+  }
+
+  .date-picker span {
+    margin: 5px 0;
+  }
+
+  .react-datepicker__input-container input {
+    width: 80%;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .revenue {
+    padding: 5px;
+  }
+
+  .revenue h3 {
+    font-size: 18px;
+  }
+
+  .date-picker {
+    margin-bottom: 10px;
+  }
+
+  .date-picker span {
+    margin: 3px 0;
+    font-size: 0.9em;
+  }
+
+  .react-datepicker__input-container input {
+    width: 100%;
+    padding: 5px;
+  }
+}

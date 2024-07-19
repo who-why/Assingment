@@ -1,0 +1,49 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-icon{
+  cursor: pointer;
+  margin-left: 20px;
+  font-size: 50px;
+}
+
+.menu h3 {
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-item {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.icons p {
+  margin: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    font-size: 30px;
+  }
+
+  .icon-item {
+    font-size: 1rem;
+  }
+}

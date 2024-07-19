@@ -1,0 +1,55 @@
+.preferred-add-ons-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.preferred-add-ons-container h3 {
+  margin-bottom: 25px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  text-align: left;
+}
+
+.add-on-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.add-on-name {
+  font-family: Montserrat;
+font-size: 22px;
+font-weight: 500;
+line-height: 26.82px;
+text-align: left;
+
+}
+
+.add-on-rating {
+  display: flex;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  top: 914px;
+  left: 1129px;
+  gap: 0px;
+  opacity: 0px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: #B3B3B340;
+}
+.circle.filled {
+  background: #4CAF50;
+}
+.circle.half-filled {
+  background: linear-gradient(90deg, #34d399 50%, #e0e0e0 50%);
+}
