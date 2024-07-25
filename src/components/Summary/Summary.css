@@ -1,0 +1,125 @@
+.order-summary {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-items {
+  padding: 10px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+}
+
+.item-icon {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+}
+
+.charges {
+  padding: 10px 0;
+}
+
+.charge-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.buttons button {
+  padding: 7px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-kot {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-bill {
+  background-color: #28a745;
+  color: white;
+}
+@media (max-width: 768px) {
+  .search-filter-bar {
+    gap: 10px;
+  }
+
+  .search-filter-bar input,
+  .search-filter-bar select {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search-filter-bar button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-filter-bar {
+    padding: 5px;
+  }
+
+  .search-filter-bar input,
+  .search-filter-bar select {
+    padding: 10px;
+  }
+
+  .search-filter-bar button {
+    padding: 8px 20px;
+  }
+}

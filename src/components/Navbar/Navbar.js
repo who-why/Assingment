@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='nav'>
         <div className='menu'>
             <IoMdMenu className='menu-icon'/>
-            <h3>Analytics</h3>
+            <h3>Tables</h3>
         </div>
 
 

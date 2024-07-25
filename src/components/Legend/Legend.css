@@ -1,0 +1,38 @@
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.available {
+  border-color: green;
+}
+
+.busy {
+  border-color: red;
+}
+
+span {
+  font-weight: bold;
+  color: #000;
+}
